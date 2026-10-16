@@ -1,64 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>skysoftly</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>SkySofly :3</title>
+    <link rel="icon" href="icon.ico">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="starfield"></canvas>
+    <div class="profile">
+      <div class="avatar">
+        <img src="avatar.png" class="avatar">
+      </div>
+      <h1>SkySoftly</h1>
+      <p>программирую, играю в игры и превращаю идеи в реальность ♡</p>
+    </div>
 
-    <div class="aurora aurora-1"></div>
-    <div class="aurora aurora-2"></div>
-    <div class="aurora aurora-3"></div>
-    <div class="stars" id="stars"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
-    <div class="cursor-star" id="cursorStar">*</div>
+    <div class="socials">
+    <a href="https://t.me/SkySoftly">
+        <img src="images/telegram.png" alt="">
+        Telegram
+    </a>
 
-    <main class="wrapper">
-        <div class="card">
-            <div class="card-inner">
+    <a href="https://discord.com/users/1291455178163097726">
+        <img src="images/discord.png" alt="">
+        Discord
+    </a>
 
-                <div class="avatar-block">
-                    <div class="avatar-glow"></div>
-                    <img src="ava.png" alt="avatar" class="avatar">
-                </div>
+    <a href="https://steamcommunity.com/profiles/76561199555828200/">
+        <img src="images/steam.png" alt="">
+        Steam
+    </a>
 
-                <h1 class="name">
-                    <span>skysoftly</span>
-                </h1>
-                <p class="bio">:3</p>
-
-                <nav class="links">
-                    <a href="https://discord.com/users/1291455178163097726" target="_blank" rel="noopener" class="link discord">
-                        <span class="icon-wrap"><i class="fa-brands fa-discord"></i></span>
-                        <span class="label">Discord</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-                    </a>
-                    <a href="https://t.me/SkySoftly" target="_blank" rel="noopener" class="link telegram">
-                        <span class="icon-wrap"><i class="fa-brands fa-telegram"></i></span>
-                        <span class="label">Telegram</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-                    </a>
-                    <a href="https://github.com/skysoftly" target="_blank" rel="noopener" class="link github">
-                        <span class="icon-wrap"><i class="fa-brands fa-github"></i></span>
-                        <span class="label">GitHub</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-                    </a>
-                </nav>
-
-                <div class="footer-tag">
-                    <span class="dot"></span> online
-                </div>
-
-            </div>
-        </div>
-    </main>
+    <a href="https://github.com/skysoftly">
+        <img src="images/github.png" alt="">
+        GitHub
+    </a>
+</div>
 
     <script src="script.js"></script>
-</body>
+    <script src="stars.js"></script>
+  </body>
 </html>
