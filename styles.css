@@ -8,6 +8,15 @@ html {
     scroll-padding-top: 20px;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button
+{
+  -webkit-tap-highlight-color: transparent;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -129,18 +138,121 @@ div.main
 
 
 
-&::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 12px;
     background-color: transparent;
 }
-&::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #3A2646;
     border: 3px solid transparent; 
     background-clip: padding-box;   
 }
     
-&::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #442f50;
     border: 3px solid transparent; 
     background-clip: padding-box;   
+}
+
+
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    
+    /* 1. Трансформируем существующее меню в верхнюю шапку */
+    div.menu {
+        position: fixed;       /* Прилипает сверху */
+        top: 0;
+        left: 0;
+        width: 100%;           /* На всю ширину */
+        height: auto;
+        margin: 0;
+        padding: 10px 15px;
+        flex-direction: row;   /* Элементы в строку */
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        border-width: 0 0 4px 0; /* Убираем рамки по бокам */
+        box-shadow: 0 4px 0px #3a264665;
+        overflow: visible;     /* Отключаем скролл внутри */
+        display: flex;
+        flex-wrap: wrap;       /* Позволяем перенос элементов */
+    }
+
+    /* Логотип и ник в одну строку */
+    div.menu img {
+        width: 40px;
+        margin: 0;
+    }
+    
+    div.menu h1 {
+        font-size: 20px;
+        margin: 0 0 0 10px;
+        flex-grow: 1; /* Занимает место между лого и бургером */
+        text-align: left;
+    }
+
+    /* Показываем бургер */
+    .burger {
+        display: block;
+        background: none;
+        border: none;
+        color: #4a3158;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 0;
+        margin-left: auto;
+        transition: all 0.1s ease, box-shadow 0.1s ease;
+
+        &:active {
+            color: #2c1c35;
+            transform: scale(1.05);
+        }
+    }
+
+    /* Прячем всё лишнее по умолчанию (статус, разделители, навигацию) */
+    div.menu > p,
+    div.menu > .pixel-divider,
+    div.menu > nav {
+        display: none;
+    }
+
+    /* Когда меню открыто — показываем навигацию */
+    div.menu.open > p,
+    div.menu.open > .pixel-divider,
+    div.menu.open > nav {
+        display: flex; /* Или block, в зависимости от элемента */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 5px;
+        order: 10; /* Переносим вниз под шапку */
+    }
+    
+    /* Статус "Создаю свой мир" можно скрыть даже в открытом состоянии */
+    div.menu.open > p {
+        display: none; 
+    }
+
+    /* Разделители в открытом меню */
+    div.menu.open > .pixel-divider {
+        display: block;
+    }
+
+    /* Кнопки навигации */
+    div.menu.open > nav a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    /* 2. Контент */
+    div.main {
+        margin: 10px;
+        margin-top: 70px; /* Отступ под фиксированную шапку */
+        width: calc(100% - 20px);
+    }
 }

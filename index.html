@@ -9,46 +9,33 @@
 </head>
 <body>
     <div class="menu">
+
         <img src="img/logo.png" alt="Logo">
         <h1>SkySoftly</h1>
         <p>Создаю свой мир</p>
         
+        <button class="burger" id="burgerBtn">☰</button>
+        
         <div class="pixel-divider"></div>
         <nav>
             <a href="#" class="active">Главная</a>
-            <a href="#">Обо мне</a>
+            <!-- <a href="#">Обо мне</a>
             <a href="#">Проекты</a>
-            <a href="#">Контакты</a>
+            <a href="#">Контакты</a> -->
         </nav>
         <div class="pixel-divider"></div>
         <nav>
             <a href="#main">Главная</a>
             <a href="#news">Новости</a>
-            <a href="#articles">Статьи</a>
-            <a href="#videos">Видео</a>
         </nav>
     </div>
 
     <div class="main">
         <div id="main" class="pixel-card">
-            <h2>Добро пожаловать в мой мир!</h2>
+            <h2>Добро пожаловать!</h2>
             <p>На нашем сайте вы можете:</p>
             <ul>
                 <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
             </ul>
         </div>
         <div class="pixel-divider"></div>
@@ -58,68 +45,22 @@
             <p>Последние новости:</p>
             <ul>
                 <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
             </ul>
         </div>
         <div class="pixel-divider"></div>
-
-        <div id="articles" class="pixel-card">
-            <h2>Статьи</h2>
-            <p>Последние статьи:</p>
-            <ul>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-            </ul>
-        </div>
-        <div class="pixel-divider"></div>
-        
-        <div id="videos" class="pixel-card">
-            <h2>Видео</h2>
-            <p>Последние видео:</p>
-            <ul>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-                <li>Просматривать новости</li>
-                <li>Читать статьи</li>
-                <li>Смотреть видео</li>
-            </ul>
-        </div>
     </div>
+
+    
+    <script>
+        // Скрипт для бургера (работает только на телефоне)
+        const burgerBtn = document.getElementById('burgerBtn');
+        const menu = document.querySelector('.menu');
+
+        if (burgerBtn) {
+            burgerBtn.addEventListener('click', () => {
+                menu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>
