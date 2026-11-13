@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://skysoftly.github.io/skysoftly/sitemap.xml
