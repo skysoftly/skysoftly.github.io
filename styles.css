@@ -40,6 +40,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+.clickable-logo {
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.clickable-logo:active {
+    transform: scale(0.95);
+}
+
 .pixel-divider {
     height: 4px;
     background-color: #4a3158;
